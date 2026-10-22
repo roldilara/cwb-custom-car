@@ -479,8 +479,12 @@ const CONFIG = {
 };
 
 /* Fotos da galeria: salve em /fotos e ajuste os nomes/títulos.
-   cat: lavagem | polimento | protecao | acabamento */
+   cat: raros | lavagem | polimento | protecao | acabamento */
 const FOTOS = [
+  { src:"fotos/skyline-lado.jpg",    cat:"raros", title:"Nissan Skyline GT-R R34" },
+  { src:"fotos/maverick.jpg",        cat:"raros", title:"Ford Maverick GT" },
+  { src:"fotos/skyline-frente.jpg",  cat:"raros", title:"Skyline GT-R · Pintura revitalizada" },
+  { src:"fotos/skyline-motor.jpg",   cat:"raros", title:"Skyline GT-R · Cofre do motor" },
   { src:"fotos/g-bmw-frente.jpg", cat:"acabamento", title:"BMW Série 3 · Acabamento final" },
   { src:"fotos/g-rs6-1.jpg", cat:"lavagem", title:"Audi RS6 · Lavagem com espuma" },
   { src:"fotos/g-polimento.jpg", cat:"polimento", title:"Polimento em ação" },
@@ -509,7 +513,7 @@ const FOTOS = [
 ];
 /* ==================================================== */
 
-const CAT = {lavagem:"Lavagem",polimento:"Polimento",protecao:"Proteção",acabamento:"Acabamento"};
+const CAT = {raros:"Raros e clássicos",lavagem:"Lavagem",polimento:"Polimento",protecao:"Proteção",acabamento:"Acabamento"};
 const waURL = (txt) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt||CONFIG.mensagem)}`;
 document.querySelectorAll('[data-wa]').forEach(a=>{a.href=waURL();a.target="_blank";a.rel="noopener"});
 document.querySelectorAll('[data-ig]').forEach(a=>{a.href=`https://instagram.com/${CONFIG.instagram}`;a.target="_blank";a.rel="noopener"});
